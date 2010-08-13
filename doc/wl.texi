@@ -740,7 +740,7 @@ if you have to go through a firewall.
 
 @lisp
 @group
-;; @r{Example: imap4.exaple.org as main IMAP server}
+;; @r{Example: imap4.example.org as main IMAP server}
 (setq elmo-imap4-default-server "imap4.example.org")
 @end group
 @end lisp
@@ -4073,7 +4073,7 @@ Save the current summary.
 
 
 @node Variables of Summary,  , Key Bindings of Summary, Summary
-@section Customiziable variables
+@section Customizable variables
 
 @table @code
 @item wl-summary-move-order
@@ -5551,7 +5551,7 @@ ignores uncached messages.
 
 
 @node Enable Operations, Plugged Mode, Off-line State, Disconnected Operations
-@section Enable Disconeected Operations
+@section Enable Disconnected Operations
 
 Even in the off-line state, provided that relevant messages are cached,
 and the variable @code{elmo-enable-disconnected-operation} (described
@@ -6011,7 +6011,7 @@ If you omit the argument, consecutive numbers from 1 are assigned for
 each archiving folder.
 
 @item wl-expire-localdir-date
-divedes messages depending on its date (year and month) to MH folders
+divides messages depending on its date (year and month) to MH folders
 e.g. to @samp{+ml/wl/1999_11/}, @samp{+ml/wl/1999_12/}.
 @end table
 @end table
@@ -7007,8 +7007,8 @@ Edit entry.
 @chapter Spam Filter
 @cindex Spam Filter
 
-@code{wl-spam} provides an frontend to external spam filtering programs.
-You can register to or judge spam by the filtering program cooperateing
+@code{wl-spam} provides a frontend to external spam filtering programs.
+You can register to or judge spam by the filtering program cooperating
 with messages operations on Wanderlust.
 
 @menu
@@ -7108,7 +7108,7 @@ Example follows:
 @code{wl-spam} automatically learn spam with refiling messages.
 
 At first, @code{wl-spam} classifies the folders controlled by Wanderlust
-into following 4 domains by the class of containig messages
+into following 4 domains by the class of containing messages
 
 @table @samp
 @item spam
@@ -7121,7 +7121,7 @@ Folders containing messages not yet judged. Folders without
 pre-distribution may belong to this domain e.g. @samp{+inbox}.
 (specified by @code{wl-spam-undecided-folder-regexp-list})
 @item ignored
-Foldes have nothing to do with spam processing e.g.
+Folders have nothing to do with spam processing e.g.
 @code{wl-trash-folder} or @code{wl-draft-folder}. (specified by
 @code{wl-spam-ignored-folder-regexp-list})
 @end table
@@ -7301,7 +7301,7 @@ by whole-folder judgement including auto test by
 Persistent marks can be used in this method, but temporary marks cannot.
 
 You can specify the list of marks as the initial setting, or you can
-specify follwing symbol:
+specify following symbol:
 
 @table @code
 @item all
@@ -7391,7 +7391,7 @@ Corresponding modules will be compiled/installed, if you have
 
 To use @file{spamfilter.el}, write following setting in @file{~/.wl} or
 somewhere else.
-(Of cource, you have to have settings for @file{spamfilter.el} itself)
+(Of course, you have to have settings for @file{spamfilter.el} itself)
 
 @lisp
 @group
