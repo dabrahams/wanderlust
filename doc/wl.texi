@@ -2678,7 +2678,7 @@ In the summary mode, messages are displayed like following.
 Each line displays:
 
 @example
-@var{Message number}, @var{Temporal mark}, @var{Persistent mark}, @var{Date}, @var{Sender}, @var{Subject}
+@var{Message number}, @var{Temporary mark}, @var{Persistent mark}, @var{Date}, @var{Sender}, @var{Subject}
 @end example
 
 @noindent
@@ -2690,7 +2690,7 @@ the section format of Summary lines.
 the NNTP folder, it is article number, in the IMAP folder, it is UID and
 in the MH folder, it is the filename of the message.
 
-@var{Temporal mark} and @var{Persistent mark} are described later.
+@var{Temporary mark} and @var{Persistent mark} are described later.
 
 @var{Date} is displayed like @samp{@var{Month}/@var{Day}(@var{Week
 Day})@var{Hour}:@var{Minute}}.  Default setting displays week day in
@@ -3377,7 +3377,7 @@ Save the message at current cursor point.
 @kindex n (Summary)
 @findex wl-summary-next
 Move cursor to the next message.
-If message is marked with a temporal mark in
+If message is marked with a temporary mark in
 @code{wl-summary-skip-mark-list}, cursor is not moved to it.
 In the offline mode, cursor is not moved to the messages which are not cached
 yet.
@@ -3387,7 +3387,7 @@ yet.
 @kindex p (Summary)
 @findex wl-summary-prev
 Move cursor to the previous message.
-If message is marked with a temporal mark in
+If message is marked with a temporary mark in
 @code{wl-summary-skip-mark-list}, cursor is not moved to it.
 In the offline mode, cursor is not moved to the messages which are not cached
 yet.
@@ -3718,12 +3718,12 @@ Put resend reservation mark on the message at the current cursor point.
 @item u
 @kindex u (Summary)
 @findex wl-summary-unmark
-Unmark the temporal mark on the message at the current cursor point.
+Unmark the temporary mark on the message at the current cursor point.
 (@code{wl-summary-unmark})
 
 @item U
 @kindex U (Summary)
-Unmark all the temporal marks.
+Unmark all the temporary marks.
 @findex wl-summary-unmark-all
 (@code{wl-summary-unmark-all})
 
@@ -3799,7 +3799,7 @@ Put prefetch reservation mark on messages in the specified region.
 @item r u
 @kindex r u (Summary)
 @findex wl-summary-unmark-region
-Delete temporal mark on the messages in the specified region.
+Delete temporary mark on the messages in the specified region.
 (@code{wl-summary-unmark-region})
 
 @item r y
@@ -3893,7 +3893,7 @@ the current thread.
 @item t u
 @kindex t u (Summary)
 @findex wl-thread-unmark
-Unmark temporal mark on the messages which are the descendant of the
+Unmark temporary mark on the messages which are the descendant of the
 current thread. With prefix argument, it affects on the all messages in
 the thread tree.
 (@code{wl-thread-unmark})
@@ -3969,7 +3969,7 @@ Save messages which have target mark @samp{*}.
 
 @item m u
 @kindex m u (Summary)
-Unmark all temporal marks.
+Unmark all temporary marks.
 (@code{wl-summary-delete-all-temp-marks})
 @findex wl-summary-delete-all-temp-marks
 
@@ -4315,7 +4315,7 @@ The initial setting is the list shown below:
 @end lisp
 
 @noindent
-If a message is already marked as temporal marks in this list, the
+If a message is already marked as temporary marks in this list, the
 message is not marked by any mark command.
 
 @item wl-summary-skip-mark-list
@@ -4329,7 +4329,7 @@ The initial setting is the list shown below:
 @end lisp
 
 @noindent
-If a message is already marked as temporal marks in this list, the
+If a message is already marked as temporary marks in this list, the
 message is skipped at cursor move.
 
 @item elmo-message-fetch-threshold
