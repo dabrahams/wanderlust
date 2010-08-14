@@ -557,11 +557,8 @@ You can skip this section because it is possible to add/edit the
 subscribe folders from the buffer for list of folders.
 @xref{Folder Manager}.
 
-Define the folders you want to subscribe in file @file{~/.folders}.  The
-contents written in @file{~/.folders} become the folders which you
-subscribe to as it is.
-
-Format for @file{~/.folders} is very simple. Here is an example:
+The file @file{~/.folders} declares the folders to which you are subscribed.  
+Its format is very simple. Here is an example:
 
 @example
 @group
@@ -586,8 +583,8 @@ Emacsen@{
     *-fj.editor.xemacs,-fj.editor.mule,-fj.editor.emacs "fj's Emacsen"
 @}
 #
-# @r{If folder name ends with @samp{/}, that means an `access group',}
-# @r{all subfolders automatically included in one folder group.}
+# @r{A folder name ending with @samp{/} indicates an `access group',}
+# @r{A UI element that presents all of that folder's subfolders}
 #
 %#mh/expire@@localhost /
 # @r{All MH folders are included in one folder group.}
@@ -595,28 +592,31 @@ Emacsen@{
 @end group
 @end example
 
-Each line contains one folder you want to read. The definition of
-folders will be explained in detail in the next section.
+Most lines in @file{~/.folders} name a folder you want to see in your
+Wanderlust interface. The syntax of folder names will be explained in
+detail in the next section.
 
-The part surrounded by @samp{@var{group name}@{} and @samp{@}} will
-become one folder group.  One folder group is treated as a directory
-which can be opened and closed in folder mode. It is convenient for
-collecting some folders and putting them in order.
+Surrounding folder names by @samp{@var{group name}@{} and @samp{@}}
+creates a folder group.  A folder group is treated as a directory which
+can be opened and closed in folder mode. It is convenient for collecting
+folders and putting them in order.
 
-Please note that @samp{@var{group name}@{} and @samp{@}} occupies one
-line and you have to write it that way (It is because the parser sucks).
+Please note that @samp{@var{group name}@{} and @samp{@}} occupy one line
+each and you have to write them that way (because the parser sucks).
 
-There are two types of groups. One is like @samp{Emacsen} from above
-example which the user chooses his favorite folders as a group.
+There are two types of groups. Ordinary groups are like @samp{Emacsen},
+above, in which the user explicitly names the group's member folders.
+@dfn{Access group}s, like @samp{+ /} above, automatically collect all
+sub-folders in the folder to make a group.  
 
-The other one is @dfn{access group} like @samp{+ /} from above example.
-It collects all sub-folders in the folder to make a group.  (Its
-behavior differs by the type of the folder. For example, @samp{+}
-followed by @samp{/} makes entire MH sub-directories to one group)
-
-This behavior is better understood if you try it and confirmed the
-function first. You can write and try a small folder definition, so you
-will know the idea of the folder function before writing the real one.
+@comment I strongly suggest eliminating the following paragraph, as I
+@comment don't believe it adds anything to comprehensibility - DWA
+The method of identifying sub-folders depends on the type of the parent
+folder. For example, @samp{+} followed by @samp{/} makes all MH
+sub-directories into one group.  This behavior is better understood if
+you try it and confirmed the function first. You can write and try a
+small folder definition, so you will know the idea of the folder
+function before writing the real one.
 
 @node Start Wanderlust, Overview, Folder Definition, Start Me Up
 @section Start Wanderlust
