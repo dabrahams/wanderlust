@@ -2789,21 +2789,19 @@ by wanderlust (see @xref{Expire and Archive}).
 
 @subsection How To Read
 
-Basically, you can read messages only typing space key again and again.
+Basically, you can read messages by hitting the space key again and again.
 
-To update summary status to the newest status (synchronize),
-type @kbd{s} key.
+To update the summary status (synchronize), hit the @kbd{s} key.
 
-You can jump to next unread message by typing @kbd{N} key, and @kbd{n} key
-moves cursor to the next message.
-Enter message buffer by typing @kbd{j} key.
-To operate multipart, you have to enter to the message buffer.
-@xref{Message}.
+The @kbd{n} key moves the cursor to the next message, and you can jump
+to the next unread message by typing @kbd{N}.  Enter the message buffer
+by typing @kbd{j}.  To operate on a message's MIME parts, you have to
+enter to the message buffer.  @xref{Message}.
 
 @subsection Pack the Message Numbers
-You can pack the message numbers in Summary by
-@kbd{M-x wl-summary-pack-number}. Note that only MH Folder,
-News Spool Folder and Maildir Folder are supported folder types.
+You can pack the message numbers in MH, News Spool, and Maildir folders
+with @kbd{M-x wl-summary-pack-number}. Message packing in other folder
+types is not supported.
 
 
 @node Thread Operations, Cache, Usage of Summary Mode, Summary
