@@ -163,7 +163,7 @@ The main features of Wanderlust:
 
 @section Environment
 
-We confirm Wanderlust works on following Emacsen:
+We confirm Wanderlust works on the following Emacsen:
 
 @itemize @bullet
 @item Mule 2.3 based on Emacs 19.34
@@ -174,8 +174,7 @@ We confirm Wanderlust works on following Emacsen:
 @item PMMule
 @end itemize
 
-IMAP4 connectivity with following imapd are confirmed to work with
-Wanderlust:
+Wanderlust is confirmed to work with the following IMAP servers:
 
 @itemize @bullet
 @item UW imapd 4.1--4.7, 4.7a, 4.7b, 4.7c, 2000 or later
@@ -187,13 +186,11 @@ Wanderlust:
 @item Sun Internet Mail Server 3.5, 3.5.alpha, 4.0
 @end itemize
 
-LDAP connectivity with following LDAPd are confirmed to work with
-Wanderlust:
+Wanderlust is confirmed to work with the following LDAP servers:
 
 @itemize @bullet
 @item OpenLDAP 2.0.6 or later
 @end itemize
-
 
 @node Start Me Up, Folders, Introduction, Top
 @chapter Start up Wanderlust
@@ -224,7 +221,7 @@ here.
 
 You must install SEMI beforehand to use Wanderlust.
 
-SEMI can be downloaded from following site:
+SEMI can be downloaded from the following site:
 
 @example
 @group
@@ -233,7 +230,7 @@ SEMI:   ftp://ftp.m17n.org/pub/mule/semi/
 @end example
 
 You need packages named APEL and FLIM to use SEMI.
-You can download APEL and FLIM from following URLs:
+You can download APEL and FLIM from the following URLs:
 
 @example
 @group
@@ -252,14 +249,14 @@ procedure @footnote{If you want to use SEMI on Emacs 19.34. @*
 may help you.}.
 
 
-Recommended combination of APEL, FLIM and SEMI are following:
+The recommended combination of APEL, FLIM and SEMI is:
 
 @itemize @minus
 @item APEL 10.6, FLIM 1.14.6 and SEMI 1.14.6
 @end itemize
 
 You can also use many other FLIM/SEMI variants. Combination of the
-latest versions should work.  For example, the following combination are
+latest versions should work.  For example, the following combination is
 confirmed to work.
 
 @itemize @minus
@@ -267,14 +264,14 @@ confirmed to work.
 @item APEL 10.6, CLIME 1.14.5, EMIKO 1.14.1
 @end itemize
 
-You have to re-install Wanderlust if you upgraded APEL, FLIM or SEMI.
+You have to re-install Wanderlust if you upgrade APEL, FLIM or SEMI.
 
 
 @node Download, Install, MIME Modules, Start Me Up
 @section Download and Extract the Package
 @cindex Download
 
-You can download Wanderlust package from following sites:
+You can download Wanderlust package from the following sites:
 
 Original site:
 @example
@@ -319,7 +316,7 @@ directory that OpenSSL commands are installed.
 
 To use the latter SSL(STARTTLS), you must install starttls package in
 addition to above.
-You can download starttls package from the following site.
+You can download the starttls package from the following site.
 
 @example
 ftp://opaopa.org/pub/elisp/
@@ -338,7 +335,7 @@ ftp://opaopa.org/pub/elisp/
 Edit @code{LISPDIR} and @code{EMACS} in @file{Makefile}.
 Set the Emacs's command name to @code{EMACS}.
 Set package installation directory to @code{LISPDIR}.
-Then, please execute following commands.
+Then, please execute the following commands.
 
 @example
 @group
@@ -375,7 +372,7 @@ with that name exists in extracted directory. You can use @file{WL-CFG} to
 configure @code{load-path} to extra packages such as SEMI if needed.
 
 If you want to specify the install directory of Wanderlust related
-files, then set following variables in @file{WL-CFG}
+files, then set the following variables in @file{WL-CFG}
 
 @table @code
 @item WL_PREFIX
@@ -396,7 +393,7 @@ ELMO modules include @file{elmo*.el}, @file{elmo*.elc} files.
 Default value of @code{WL_PREFIX} and @code{ELMO_PREFIX} are @file{wl}.
 
 If you want to install ELMO related files under a sub-directory
-such as "elmo" then add following to @file{WL-CFG}:
+such as "elmo" then add the following to @file{WL-CFG}:
 
 @lisp
 (setq ELMO_PREFIX "elmo")
@@ -432,7 +429,7 @@ package directory is auto-probed, if SEMI is installed.
 If wl and elmo directories are defined in @code{load-path}, then
 byte-compilation and installation are not necessary to start Wanderlust.
 For example, if package is extracted in @file{~/work}, Wanderlust can be
-invoked with following setting in @file{~/.emacs}.
+invoked with the following setting in @file{~/.emacs}.
 
 @lisp
 @group
@@ -443,7 +440,7 @@ invoked with following setting in @file{~/.emacs}.
 
 @subsection Manual
 
-Manual is described in Info format. Please do following.
+This manual is described in Info format. Please do the following.
 
 @example
 @group
@@ -523,7 +520,7 @@ in @file{~/.wl}).
 @vindex mail-user-agent
 @findex compose-mail
 
-If you write following setting in your @file{~/.emacs}, you can
+If you write the following setting in your @file{~/.emacs}, you can
 start Wanderlust draft mode by typing @kbd{C-x m} (@code{compose-mail}).
 This means it enables you to run Wanderlust as a default mail composer
  of Emacsen.
@@ -623,7 +620,7 @@ function before writing the real one.
 @cindex Start Wanderlust
 
 If installation and configuration worked well, you can invoke Wanderlust by
-typing following command in Emacs.
+typing the following command in Emacs.
 
 @example
 M-x wl
@@ -643,8 +640,8 @@ can skip folder checking.
 @cindex Overview
 
 Basically, you will handle messages in wanderlust while you come and go
-from/to each of the following buffers.  Details of each ones are
-explained in following chapters.
+from/to each of the following buffers.  Details of each one are
+explained in subsequent chapters.
 
 @table @samp
 @item Folder Buffer
@@ -806,14 +803,14 @@ are using Emacs with UTF-7 support and
 value is @code{nil}).
 
 Currently, Mule-UCS package is required to use UTF-7.
-Mule-UCS works on following Emacsen.
+Mule-UCS works on the following Emacsen.
 
 @itemize @bullet
 @item Emacs 20.3 or later
 @item XEmacs 21.2.37 or later
 @end itemize
 
-You can obtain Mule-UCS package from following URL.
+You can obtain Mule-UCS package from the following URL.
 
 @example
 ftp://ftp.m17n.org/pub/mule/Mule-UCS/
@@ -1043,7 +1040,7 @@ $ml;zip/        -> Access group consists of archive folders
 @pindex TAR
 @pindex GNU TAR
 
-By default, following archives are supported.
+By default, the following archives are supported.
 
 @example
 @group
@@ -1126,7 +1123,7 @@ it takes long time to access the archive folder because
 archiver starting overhead is increased (especially LHA).
 150-200 messages in one archive is recommended.
 
-Of course, following is possible @t{:-)}
+Of course, the following is possible @t{:-)}
 (meanings of these variables are described later.)
 
 @lisp
@@ -1150,7 +1147,7 @@ Set archiver type by symbol.
 @vindex elmo-archive-TYPE-method-alist
 Define archiver @var{type}'s methods.
 (@var{type} is @samp{lha}, @samp{zip}, @samp{zoo}, @samp{tgz} etc)
-Each element of the alist is following.
+Each element of the alist is as follows.
 
 @example
 @group
@@ -1159,7 +1156,7 @@ Each element of the alist is following.
 @end group
 @end example
 
-Currently available actions are following.
+The available actions are
 
 @example
 @group
@@ -1170,7 +1167,7 @@ Currently available actions are following.
 @end example
 
 @noindent
-In above actions,
+In the above actions,
 actions enclosed with braces are optional (They are used for better
 performance).
 
@@ -1359,14 +1356,15 @@ on the @var{search engine}.
 
 @subsection Supported search engines
 
-Supported search engines are following ones.  Default search engine can
-be assigned by @code{elmo-search-default-engine}.
+The supported search engines are 
 
 @menu
 * namazu::      namazu
 * grep::        grep
 @end menu
 
+The default search engine can be assigned by setting
+@code{elmo-search-default-engine}.
 
 @node namazu, grep, Search Folder, Search Folder
 @subsection namazu
@@ -1525,7 +1523,7 @@ Format:
 @samp{/} @var{condition} @samp{/} @var{target-folder}
 @end example
 
-In the @var{condition} part, you can specify following.
+In the @var{condition} part, you can specify the following.
 
 @enumerate
 @item
@@ -1549,7 +1547,7 @@ Date filter: @samp{since:@var{date}}, @samp{before:@var{date}}
 since: only messages arrived since @var{date} are picked (@var{date} is included).
 before: only messages arrived before @var{date} are picked (@var{date} is not included).
 
-You can specify following as @var{date}.
+You can specify the following as @var{date}.
 
 @example
 @group
@@ -1595,7 +1593,7 @@ Flag filter: @samp{flag:@var{flag-name}}
 
 Pick up messages with flag specified by @var{flag-name}.
 
-You can specify following flag names:
+You can specify the following flag names:
 
 @example
 @group
@@ -1707,7 +1705,7 @@ Format:
 When you access the pipe folder, messages are automatically transferred
 from @var{source-folder} to @var{destination-folder}.
 It is convenient if you want to download messages to local disk via POP.
-For example, if you specify following
+For example, if you specify the following
 
 @example
 |&username@@popserver|+inbox
@@ -1918,7 +1916,7 @@ summary window appears on the right of the folder mode window.
 
 @subsection Key bindings
 
-Folder mode's key binding (related to selecting folders) is following.
+Folder mode's key bindings (related to selecting folders) follow.
 
 @table @kbd
 @item @key{SPC}
@@ -2230,7 +2228,7 @@ A list of regular expressions for access groups which creates children
 folder list hierarchically.
 
 For example, if you specify
-@code{wl-folder-hierarchy-access-folders} like following,
+@code{wl-folder-hierarchy-access-folders} as follows,
 
 @lisp
 @group
@@ -2343,9 +2341,9 @@ affect on the child groups.
 
 @subsubsection Hiding Folders in the Access Group
 
-Usually, access group displays all children folders, but you can set
-some folders hidden. Following operations are only available on access
-group.
+Usually, access group displays all child folders, but you can make
+some folders hidden. The following operations are only available on access
+groups.
 
 Command @code{wl-fldmgr-unsubscribe} (@kbd{u}) toggles the visibility
 (subscribe/unsubscribe) of the folder at current cursor point.  Against
@@ -2518,7 +2516,7 @@ Save current folder view to the @file{wl-folders-file}.
 (@code{wl-fldmgr-save})
 @end table
 
-[Following commands are only available on the access groups]
+[The Following commands are only available on the access groups]
 
 @table @kbd
 @item u
@@ -2610,7 +2608,7 @@ candidate for @code{wl-fldmgr-add}.
 
 @subsection Miscellanea
 
-Following is a note for folder editing.
+A note for folder editing:
 
 @enumerate
 @item
@@ -2664,7 +2662,7 @@ mode.
 
 @subsection Summary Content
 
-In the summary mode, messages are displayed like following.
+In the summary mode, messages are displayed as follows.
 
 @example
 @group
@@ -2820,7 +2818,7 @@ For example, the following line indicates one thread (a context of a topic).
 
 @noindent
 If you type @kbd{/} on this line, the thread is opened and it changes
-the appearance like following.
+the appearance as follows.
 
 @example
 @group
@@ -2924,7 +2922,7 @@ the content of the message header information (information in the msgdb).
 
 By default, @samp{From:}, @samp{Subject:}, @samp{To:} and @samp{Cc:} is
 available.  If you want to decide destination by other header fields,
-set the variable @code{elmo-msgdb-extra-fields} like following.
+set the variable @code{elmo-msgdb-extra-fields} as follows.
 
 @lisp
 @group
@@ -2968,7 +2966,7 @@ case, If the field value of the rule and the current rule is matched,
 then the current rule is fired (i.e. AND condition).
 
 You can refer matched substring of @var{regexp} to specify @var{target} part.
-To refer substring, use following keys:
+To refer to a substring, use the following keys:
 
 @table @samp
 @item \&
@@ -2979,7 +2977,7 @@ means substitute what matched the @var{N}th `\(@dots{}\)'.
 (@var{N} is a number.)
 @end table
 
-Following is an example of @code{wl-refile-rule-alist}.
+This is an example of @code{wl-refile-rule-alist}:
 
 @lisp
 @group
@@ -3004,7 +3002,7 @@ By default, @samp{N}, @samp{U} and @samp{!} is specified, so the messages
 with these persistent marks are not automatically refiled.
 It means Wanderlust does not execute auto refile on unread messages by
 the default setting.
-To execute auto refile on all messages, set following.
+To execute auto refile on all messages, execute
 
 @lisp
 (setq wl-summary-auto-refile-skip-marks nil)
@@ -4380,7 +4378,7 @@ one of the following in the place of action:
 @end example
 
 @noindent
-Following is an example (hide duplicated messages in multi folders)
+This is an example (hide duplicated messages in multi folders):
 
 @lisp
 @group
@@ -4567,7 +4565,7 @@ Basically it is Emacs-standard mail mode.
 @subsection Parameters for Sending
 
 According to the information of servers to send messages, configure
-following variables.
+the following variables.
 
 @table @code
 @item wl-smtp-posting-server
@@ -4631,7 +4629,7 @@ Specify newsgroups to which you post the news article.
 Specify addresses to send a copy (Carbon Copy) of the message.
 @end table
 
-Following ones are removed from the header contents before sending.
+The following ones are removed from the header contents before sending.
 
 @table @asis
 @item @samp{Bcc:}
@@ -4644,7 +4642,7 @@ Specify folders in which a copy of the message is saved.
 Specify recipients to send encapsulated copy of the message.
 @end table
 
-You can add initial headers by following variables.
+You can add initial headers by the following variables.
 
 @table @code
 
@@ -4734,7 +4732,7 @@ The format of @code{wl-draft-config-alist} is:
 @end group
 @end example
 
-Per default, there are 13 following sub-functions.
+Per default, there are the following sub-functions.
 
 @example
 'header:      Inserts the specified string at the bottom of the header.
@@ -5396,7 +5394,7 @@ This is the function to post NNTP message.
 @item wl-nntp-posting-config-alist
 @vindex wl-nntp-posting-config-alist
 The initial setting is @code{nil}.
-The value takes an alist to define NNTP server like following example.
+The value takes an alist to define NNTP server as in the following example.
 It takes precedence over @code{wl-nntp-posting-@{server|user|port|function@}}.
 
 @lisp
@@ -5537,7 +5535,7 @@ ignores uncached messages.
 
 Even in the off-line state, provided that relevant messages are cached,
 and the variable @code{elmo-enable-disconnected-operation} (described
-later) is non-nil, you can following operations:
+later) is non-nil, you can:
 @xref{Plugged Mode}, @xref{Off-line State settings}.
 
 @menu
@@ -7027,7 +7025,7 @@ invoking @kbd{k m} at any time.
 
 @subsection spam judgment
 
-You can judge spam messages by following ways:
+You can judge spam messages in the following ways:
 
 @enumerate
 @item
@@ -7090,7 +7088,7 @@ Example follows:
 @code{wl-spam} automatically learn spam with refiling messages.
 
 At first, @code{wl-spam} classifies the folders controlled by Wanderlust
-into following 4 domains by the class of containing messages
+into the following domains by the class of containing messages
 
 @table @samp
 @item spam
@@ -7112,7 +7110,7 @@ When you refile messages across different domains, it automatically
 learn messages as @samp{spam} or @samp{non-spam} according to domains
 it belongs before and after.
 
-To put it concretely, it will learn by following rule:
+Specifically, it will learn by the following rule:
 
 @table @samp
 @item undecide -> spam
@@ -7283,7 +7281,7 @@ by whole-folder judgement including auto test by
 Persistent marks can be used in this method, but temporary marks cannot.
 
 You can specify the list of marks as the initial setting, or you can
-specify following symbol:
+specify the following symbol:
 
 @table @code
 @item all
@@ -7558,7 +7556,7 @@ when you change the @code{spam_header} parameter in the config file.
 @cindex Regular Expressions Header Matching
 
 Examine if regular expression matches corresponding field in message heaeder,
-and decide spam or not. To use this backend, add following setting to @file{~/.wl}.
+and decide spam or not. To use this backend, add the following setting to @file{~/.wl}.
 
 @lisp
 @group
@@ -8145,7 +8143,7 @@ The face for strings (for example, a version number) in the demo.
 @section Notify Mail arrival
 @cindex Biff
 
-Following setting is to notify mail arrival of @samp{%inbox}
+The following setting is to notify mail arrival of @samp{%inbox}
 by the indicator on the modeline
 
 @lisp
@@ -8228,7 +8226,7 @@ to some specified rules. To use this feature, set as follows in your
 (autoload 'elmo-split "elmo-split" "Split messages on the folder." t)
 @end lisp
 
-Set source folder like following.
+Set source folder as follows.
 
 @lisp
 (setq elmo-split-folder "%inbox")
@@ -8257,7 +8255,7 @@ example, please.
 	;; @r{Store messages from mule mailing list into @samp{%mule}}
 	((equal x-ml-name "mule") "%mule")
 	;; @r{Store messages from wanderlust mailing list into @samp{%wanderlust}}
-	;; @r{and continue evaluating following rules}
+	;; @r{and continue evaluating the rules that follow}
 	((equal x-ml-name "wanderlust") "%wanderlust" continue)
 	;; @r{Store messages from Yahoo user into @samp{+yahoo-@{username@}}}
 	((match from "\\(.*\\)@@yahoo\\.com")
@@ -8333,7 +8331,7 @@ A symbol.
 When a symbol is specified, it is evaluated.
 @end enumerate
 
-You can specify followings as 2nd @samp{ACTION}.
+You can specify the followings as 2nd @samp{ACTION}.
 
 @enumerate
 @item
@@ -8406,7 +8404,7 @@ a list of folder names.
 @vindex wl-draft-reply-without-argument-list
 
 If you type @kbd{a} in the Summary Buffer, a draft for reply is prepared.
-The addressee for the draft is decided by following rules.
+The addressee for the draft is decided by the following rules.
 
 For example, you can set as follows:
 
@@ -8874,7 +8872,7 @@ It includes the changes of the setup, limitations etc.
 
 From version 2.12.0 on, the structure of msgdb is changed.
 The msgdb for newly created folder will use this new format when created and saved.
-But by writing following line, you may use the old format of the msgdb as it was.
+But by writing the following line, you may use the old format of the msgdb as it was.
 
 @lisp
 @group
@@ -8883,7 +8881,7 @@ But by writing following line, you may use the old format of the msgdb as it was
 @end lisp
 
 With the default setup, the old msgdb format is converted to the new
-format automatically.  You may change this behavior by writing following
+format automatically.  You may change this behavior by writing the following
 lines in @file{~/.wl}.
 
 @lisp
@@ -8986,7 +8984,7 @@ disconnected from the server.
 @cindex Bug report
 @cindex Backtrace
 
-Topics related to Wanderlust are discussed in following mailing lists.
+Topics related to Wanderlust are discussed in the following mailing lists.
 The latest version is also announced there.
 
 @display
