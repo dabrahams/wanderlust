@@ -2715,98 +2715,80 @@ message has empty subject field.
 @subsection Temporary Marks
 @cindex Mark, Temporary
 
-There are seven temporary marks,
-@samp{*}, @samp{d}, @samp{D}, @samp{o}, @samp{O}, @samp{i} and @samp{~}.
-Temporary marks indicates message operations.
+Temporary marks indicate pending message operations, to be executed when
+you press the @kbd{x} key (@code{wl-summary-exec}), or, optionally, when
+closing the current Summary buffer.  If you do not elect to execute 
+temporary marks at that point, they are discarded.  
+
+To apply a temporary mark to the message at the current cursor point,
+type the mark's character.
 
 @table @samp
 @item *
 Target mark.
-You can execute a command on the all messages that have @samp{*} mark,
-with the key bindings which begins with @kbd{m}.
+Key bindings that begin with @kbd{m} can be used to initiate a
+command on the all messages marked @samp{*}.
 
 @item d
-The mark to dispose. You can put @samp{d} by typing @kbd{d} key.
+Dispose.  By default, disposed messages are refiled to
+@code{wl-trash-folder} (see @code{wl-dispose-folder-alist}).
 
 @item D
-The mark to force delete. You can put @samp{D} by typing @kbd{D} key.
+Delete.
 
 @item o
-The mark to refile.
-After you type @kbd{o} key, prompt appears to input refile destination.
-Your answer is printed in the summary line.
+Refile.
+When applied, wanderlust prompts for the destination folder,
+which will appear in the summary line after the mark.
 
 @item O
-The mark to refile.
-You can put this mark by typing @kbd{O} key.
-The difference between this mark and refile mark is,
-this mark does not delete the message while latter does.
+Copy.  Exactly like refile except that the message will not be deleted
+from the current folder.
+
 
 @item i
-The mark to prefetch reserved.
-You can put this mark by typing @kbd{i} key.
+Prefetch.
 
 @item ~
-The mark to resend reserved.
-After you type @kbd{~} key, prompt appears to input address to resend.
-Your answer is printed in the summary line.
+Resend.
+When applied, wanderlust prompts for the destination address,
+which will appear in the summary line after the mark.
 @end table
-
-@kbd{x} key executes action for temporary marks, respectively.
 
 @subsection Persistent Marks
 
-There are ten persistent marks, @samp{!}, @samp{N}, @samp{n}, @samp{U},
-@samp{u}, @samp{A}, @samp{a}, @samp{F}, @samp{f} and @samp{$}.
-
-The persistent mark indicates the message's status and it is saved.
-Each persistent mark indicates:
+Persistent marks indicate message status.  Specifically,
 
 @table @samp
 @item N
-It is new message.
-@item n
-It is new message. It differs from @samp{N} that message with @samp{n}
-is already cached.
+@itemx n
+The message is new
 @item U
-It is unread message.
-@item u
-It is unread message. It differs from @samp{U} that message with @samp{u}
-is already cached.
-@item !
-It is message already read. It differs from message without mark that
-message with @samp{!} is not cached yet.
+@itemx u
+The message is unread
 @item A
-It is already replied message.
-@item a
-It is already replied message. It differs from @samp{A} that message
-with @samp{a} is already cached.
+@itemx a
+The message has been replied-to by you
 @item F
-It is already forwarded message.
-@item f
-It is already forwarded message. It differs from @samp{F} that message
-with @samp{f} is already cached.
+@itemx f
+The message has been forwarded by you
 @item $
-It is a message with some global flag.  It is convenient to put this
-mark on the messages to remember (If you want to remember to write a
-reply for the message, for example) because this mark remains after
-you exited Emacs.  Messages with the @samp{$} mark can be reviewed in
-the @samp{'flag} folder even the message itself is deleted in the actual
-folder. You can put global flag by typing @kbd{$} or @kbd{F} key.
-
-@item None
-If the message is read and cached (or local message),there are no
-persistent mark.
+The message is flagged.  You can review flagged messages in the internal
+@samp{'flag} folder even the message has been deleted elsewhere. You can
+flag a message by typing @kbd{$} or @kbd{F}.
+@item !
+The message has already been read, but is not available on the local machine.
 @end table
 
-@samp{N}, @samp{U}, @samp{!}, @samp{A}, @samp{F} indicates that the
-message have no cache.  Messages with the marks other than these, you
-can read them in the offline status even they are in the IMAP folder or
-netnews folder.
+@samp{!} and the uppercase marks @samp{N}, @samp{U}, @samp{A}, and
+@samp{F}, indicate that the message is not available on the local machine.
+All other messages can be read offline without further prefetching.  A
+message that is available on the local machine and already-read gets no
+persistent mark.
 
-Among messages with persistent marks, ones with marks specified by 
-@code{wl-summary-expire-reserve-marks} are excluded from the expiration
-(as a function of wanderlust) explained later. @xref{Expire and Archive}.
+Messages whose persistent marks are listed in
+@code{wl-summary-expire-reserve-marks} are excluded from expiration
+by wanderlust (see @xref{Expire and Archive}).
 
 @subsection How To Read
 
