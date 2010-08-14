@@ -2662,7 +2662,7 @@ mode.
 
 @subsection Summary Content
 
-In the summary mode, messages are displayed as follows.
+In summary mode, messages are displayed as follows.
 
 @example
 @group
@@ -2680,35 +2680,34 @@ Each line displays:
 @end example
 
 @noindent
-If you want to know how to change the format for this, please refer
-the section format of Summary lines.
+This format can be customized; see
 @xref{Summary View}.
 
-@var{Message number} is the message's unique number in the folder. In
-the NNTP folder, it is article number, in the IMAP folder, it is UID and
-in the MH folder, it is the filename of the message.
+@var{Message number} is the message's unique identifier in the
+folder. In an NNTP folder, it is the article number, in an IMAP folder,
+it is the UID and in an MH folder, it is the filename of the message.
 
 @var{Temporary mark} and @var{Persistent mark} are described later.
 
-@var{Date} is displayed like @samp{@var{Month}/@var{Day}(@var{Week
-Day})@var{Hour}:@var{Minute}}.  Default setting displays week day in
+@var{Date} is displayed as @samp{@var{Month}/@var{Day}(@var{Week
+Day})@var{Hour}:@var{Minute}}.  The default setting displays the week day in
 Japanese, but if you want to display it in English, set the value of
-@code{wl-summary-weekday-name-lang} as @samp{en}.
+@code{wl-summary-weekday-name-lang} to @samp{en}.
 
 @var{Sender}'s indentation corresponds to the depth of the thread.
-Sender name is displayed as nickname if it is defined in the address
-book.  Set @code{wl-use-petname} as @code{nil}, if you want to quit
+The sender name is displayed as a nickname if it is defined in the address
+book.  Set @code{wl-use-petname} to @code{nil} if you want to quit
 displaying with nickname.
 
-If number is printed at the head of @var{Sender} part like @samp{+2},
-that means the message have 2 follow messages.
+A number like @samp{+2} appearing at the head of the @var{Sender} part
+indicates the number of followup messages.
 
-@var{Subject} is the @samp{Subject:} header field of the message.  If
-the message have same @samp{Subject:} with the parent message, it is not
-displayed.  Some mailing list puts its sequence number in the
-@samp{Subject:} field, but it is
-ignored. @code{wl-summary-no-subject-message} is displayed when the
-message has empty subject field.
+@var{Subject} is the message's @samp{Subject:} header field.  If the
+message has the same @samp{Subject:} as its parent message, it is not
+displayed.  Some mailing lists put its sequence number in the
+@samp{Subject:} field, but that number is ignored by Wanderlust when
+comparing subjects. @code{wl-summary-no-subject-message} is displayed
+when the message has empty subject field.
 
 @subsection Temporary Marks
 @cindex Mark, Temporary
