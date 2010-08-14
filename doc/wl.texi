@@ -606,7 +606,7 @@ each and you have to write them that way (because the parser sucks).
 
 There are two types of groups. Ordinary groups are like @samp{Emacsen},
 above, in which the user explicitly names the group's member folders.
-@dfn{Access group}s, like @samp{+ /} above, automatically collect all
+@dfn{Access groups}, like @samp{+ /} above, automatically collect all
 sub-folders in the folder to make a group.  
 
 @comment I strongly suggest eliminating the following paragraph, as I
