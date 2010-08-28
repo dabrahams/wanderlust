@@ -2807,15 +2807,15 @@ types is not supported.
 @node Thread Operations, Cache, Usage of Summary Mode, Summary
 @section Thread Operations
 
-For example, the following line indicates one thread (a context of a topic).
+The following line indicates a collapsed thread:
 
 @example
   384  09/17(Thu)01:32 [+1: Teranishi       ] wl-0.6.2
 @end example
 
 @noindent
-If you type @kbd{/} on this line, the thread is opened and it changes
-the appearance as follows.
+If you type @kbd{/} on this line, the thread is opened and displayed as
+follows:
 
 @example
 @group
@@ -2824,23 +2824,23 @@ the appearance as follows.
 @end group
 @end example
 
-(Message 388 is the replied message to the message 384.)
-If you type @kbd{/} key once again, the thread is closed.
-With prefix argument, @kbd{/} opens all children threads.
+(Message 388 is the reply message to message 384.)
+If you type @kbd{/} once again, the thread is closed.
+With a prefix argument, @kbd{/} opens all child threads.
 
-If you type @kbd{[}, opens all threads in summary.  @kbd{]} closes all
+@kbd{[} opens all threads in the summary.  @kbd{]} closes all
 threads.
 
-Commands with the key binding that begins with @kbd{t} executes commands
-on the messages in the thread.
+Commands with the key bindings beginning with @kbd{t} execute commands
+on all the messages in the thread.
 @xref{Key Bindings of Summary}.
 
-@subsection reconstruct thread by hand
+@subsection Reconstructing a Thread by Hand
 
-You can reconstruct the thread manually.  In Summary, @kbd{M-w}
-(@code{wl-summary-save-current-message}) at the corresponding message,
-and @kbd{C-y} (@code{wl-summary-yank-saved-message}) at the new parent
-message then you have the reconstructed thread.
+You can reconstruct a parent-child relationship manually.  In Summary,
+@kbd{M-w} (@code{wl-summary-save-current-message}) on the child-to-be
+and @kbd{C-y} (@code{wl-summary-yank-saved-message}) on the new parent
+message.
 
 
 @node Cache, Auto Refile, Thread Operations, Summary
@@ -2848,12 +2848,12 @@ message then you have the reconstructed thread.
 
 @subsection Cache File
 
-The messages which have to access via network (e.x. IMAP, NNTP folder)
-are cached as a local file so as to save network traffic or to enable
-off-line operation.  The cache file is saved under the directory
-@file{~/.elmo/cache}.  To expire cache, type @kbd{M-x
-elmo-cache-expire-by-size}.  The command deletes cache files to the
-specified size by the order of last accessed time.
+Remotely-stored messages (c.f. IMAP, NNTP) are cached as local files to
+save network traffic and enable off-line operation.  The local file is
+saved under the directory @file{~/.elmo/cache}.  To expire the cache,
+type @kbd{M-x elmo-cache-expire-by-size}.  The command deletes cache
+files, starting with the least-recently used, until the cache occupies
+the specified number of kilobytes on disk.
 
 @subsection Buffer Cache and Prefetching
 
